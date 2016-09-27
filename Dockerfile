@@ -8,6 +8,8 @@ RUN  apk update && \
      sed -i 's/#RSAAuthentication.*/RSAAuthentication yes/ig' /etc/ssh/sshd_config && \
      npm install -g bower
 
+ADD 03-apply_key.start /etc/local.d
+
 VOLUME /var/www/html
 
 EXPOSE 22 9000
