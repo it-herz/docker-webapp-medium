@@ -29,6 +29,7 @@ done
 
 useradd -d /var/www/html -G www-data -s /bin/bash $DEVUSER
 echo "$DEVUSER:$DEVPASS" | chpasswd
+echo "$DEVUSER ALL=(ALL) NOPASSWD: /usr/bin/setfacl" > /etc/sudoers.d/ssh_user
 
 GITH="`echo $GITHOST | awk -F: '{ print $1 }'`"
 GITP="`echo $GITHOST | awk -F: '{ print $2 }'`"

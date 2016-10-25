@@ -5,7 +5,7 @@ RUN  apt-get update && \
      wget http://ftp.ru.debian.org/debian/pool/main/n/ncurses/libncurses5_6.0+20160917-1_amd64.deb && \
      wget http://ftp.ru.debian.org/debian/pool/main/n/ncurses/libncursesw5_6.0+20160917-1_amd64.deb && \
      dpkg -i *.deb && \
-     apt-get install -y openssh-server git npm \
+     apt-get install -y openssh-server git npm sudo \
              && mkdir -p /var/run/sshd && \
      umask 002 && \
      sed -i 's/#PubkeyAuthentication.*/PubkeyAuthentication yes/ig' /etc/ssh/sshd_config && \
