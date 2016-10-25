@@ -27,7 +27,7 @@ do
   fi
 done
 
-echo "$DEVUSER ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/$DEVUSER
+echo "$DEVUSER ALL=(ALL) NOPASSWD: /usr/bin/setfacl" >/etc/sudoers.d/$DEVUSER
 adduser -h /var/www/html -G www-data -s /bin/bash -D $DEVUSER
 echo "$DEVUSER:$DEVPASS" | chpasswd
 
