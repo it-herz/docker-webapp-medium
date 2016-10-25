@@ -1,7 +1,7 @@
 FROM itherz/webapp-tiny:a7
 
 RUN  apk update && \
-     apk add openssh sudo nodejs rsync git curl && \
+     apk add openssh sudo nodejs rsync curl && \
      rc-update add sshd sysinit && \
      umask 002 && \
      sed -i 's/#PubkeyAuthentication.*/PubkeyAuthentication yes/ig' /etc/ssh/sshd_config && \
