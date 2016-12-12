@@ -38,6 +38,11 @@ then
   GITP=22
 fi
 
+if [ -d "/var/www/html/.ssh" ]
+then
+  rm -r /var/www/html/.ssh
+else
+
 mkdir -p /var/www/html/.ssh
 chmod 755 /var/www/html/.ssh
 cp /key /var/www/html/.ssh/deploykey 
