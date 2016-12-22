@@ -41,7 +41,7 @@ fi
 if [ -d "/var/www/html/.ssh" ]
 then
   rm -r /var/www/html/.ssh
-else
+fi
 
 mkdir -p /var/www/html/.ssh
 chmod 755 /var/www/html/.ssh
